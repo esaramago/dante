@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'dante',
+  namespace: 'dantesco',
   outputTargets: [
     {
       type: 'dist',

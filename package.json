@@ -1,7 +1,7 @@
 {
-  "name": "esaramago-dante",
-  "version": "0.1.0",
-  "description": "Dante webcomponent library",
+  "name": "dantesco",
+  "version": "0.1.13",
+  "description": "Dantesco webcomponent library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,9 +9,10 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/dantesco/dantesco.esm.js",
   "repository": {
     "type": "git",
-    "url": "hhttps://github.com/esaramago/dante.git"
+    "url": "https://github.com/esaramago/dante.git"
   },
   "files": [
     "dist/",
