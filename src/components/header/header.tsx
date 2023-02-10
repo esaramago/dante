@@ -13,6 +13,7 @@ export class DHeader {
         return (
             <Host>
                 <span>{this.name}</span>
+                <slot></slot>
             </Host>
         )
     }

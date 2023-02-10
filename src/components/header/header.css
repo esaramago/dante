@@ -1,5 +1,5 @@
 :host {
-    display: block;
+    display: flex;
     gap: var(--gap);
     padding: var(--gap);
     background-color: var(--color-main-500);

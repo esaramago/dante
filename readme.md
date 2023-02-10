@@ -13,7 +13,7 @@ A Web Component's library for esaramago.
 ```
 
 ### Install and import via cdn
-```node
+```
 npm install dantesco --save
 ```
 
@@ -22,3 +22,22 @@ npm install dantesco --save
 import '/node_modules/dantesco/dist/dantesco/dantesco.css'
 import '/node_modules/dantesco/dist/dantesco/dantesco.esm.js'
 ```
+
+## Layout example
+```html
+<d-header name="..."></d-header>
+<main class="d-container d-stack">
+  ...
+</main>
+```
+
+## How to publish this library
+1. Run `npm run build`
+2. Update library version in package.json
+3. Run `npm publish --access=public`
+
+## To Do
+- [x] Create web component's library
+- [x] Publish library to npm
+- [ ] Create a Storybook 
+- [ ] Start using the library
