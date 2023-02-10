@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    --height: 4rem;
+    --color-main: #333;
+    --color-secondary: yellow;
+}
+
+.button {
+    border-radius: 2px;
+    padding: 0 1.6rem;
+    height: var(--height, var(--input-height));
+    background-color: var(--color-main-500, var(--color-main));
+    border: none;
+    color: #FFF;
+    transition: opacity .3s;
+    font-size: var(--font-size);
+}
+.button--secondary {
+    background-color: var(--color-secondary-500, var(--color-secondary));
+}
+.button:hover {
+    opacity: .8;
+}
