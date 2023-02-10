@@ -1,6 +1,6 @@
 {
-  "name": "dante",
-  "version": "0.0.1",
+  "name": "esaramago-dante",
+  "version": "0.1.0",
   "description": "Dante webcomponent library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -9,7 +9,6 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/dante/dante.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -29,7 +28,6 @@
     "@stencil/core": "^3.0.0"
   },
   "devDependencies": {
-    "@stencil/sass": "^2.0.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "jest": "^27.5.1",
