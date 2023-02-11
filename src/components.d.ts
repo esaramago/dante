@@ -12,13 +12,30 @@ export namespace Components {
     interface DHeader {
         "name": string;
     }
+    interface DInput {
+        "error": string;
+        "id": string;
+        "label": string;
+        "placeholder": string;
+        "required": boolean;
+        "type": string;
+        "value": string;
+    }
+    interface DLabel {
+        "htmlId": string;
+        "required": boolean;
+    }
     interface DNotification {
-        "variant": string;
+        "type": string;
     }
 }
 export interface DButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLDButtonElement;
+}
+export interface DInputCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDInputElement;
 }
 declare global {
     interface HTMLDButtonElement extends Components.DButton, HTMLStencilElement {
@@ -33,6 +50,18 @@ declare global {
         prototype: HTMLDHeaderElement;
         new (): HTMLDHeaderElement;
     };
+    interface HTMLDInputElement extends Components.DInput, HTMLStencilElement {
+    }
+    var HTMLDInputElement: {
+        prototype: HTMLDInputElement;
+        new (): HTMLDInputElement;
+    };
+    interface HTMLDLabelElement extends Components.DLabel, HTMLStencilElement {
+    }
+    var HTMLDLabelElement: {
+        prototype: HTMLDLabelElement;
+        new (): HTMLDLabelElement;
+    };
     interface HTMLDNotificationElement extends Components.DNotification, HTMLStencilElement {
     }
     var HTMLDNotificationElement: {
@@ -42,6 +71,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "d-button": HTMLDButtonElement;
         "d-header": HTMLDHeaderElement;
+        "d-input": HTMLDInputElement;
+        "d-label": HTMLDLabelElement;
         "d-notification": HTMLDNotificationElement;
     }
 }
@@ -53,12 +84,29 @@ declare namespace LocalJSX {
     interface DHeader {
         "name"?: string;
     }
+    interface DInput {
+        "error"?: string;
+        "id": string;
+        "label": string;
+        "onDChange"?: (event: DInputCustomEvent<any>) => void;
+        "onDInput"?: (event: DInputCustomEvent<any>) => void;
+        "placeholder"?: string;
+        "required"?: boolean;
+        "type"?: string;
+        "value"?: string;
+    }
+    interface DLabel {
+        "htmlId": string;
+        "required"?: boolean;
+    }
     interface DNotification {
-        "variant"?: string;
+        "type"?: string;
     }
     interface IntrinsicElements {
         "d-button": DButton;
         "d-header": DHeader;
+        "d-input": DInput;
+        "d-label": DLabel;
         "d-notification": DNotification;
     }
 }
@@ -68,6 +116,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
+            "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
+            "d-label": LocalJSX.DLabel & JSXBase.HTMLAttributes<HTMLDLabelElement>;
             "d-notification": LocalJSX.DNotification & JSXBase.HTMLAttributes<HTMLDNotificationElement>;
         }
     }

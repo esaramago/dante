@@ -23,6 +23,19 @@ import '/node_modules/dantesco/dist/dantesco/dantesco.css'
 import '/node_modules/dantesco/dist/dantesco/dantesco.esm.js'
 ```
 
+# Theme
+Add the following css custom properties are are from the default theme. Add them to your project, if you want to change them
+```css
+:host {
+  --color-main-500: #333;
+  --color-secondary-500: #666;
+
+  --gap: 1.6rem;
+
+  --font-size: 1.5rem;
+}
+```
+
 ## Layout example
 ```html
 <d-header name="..."></d-header>

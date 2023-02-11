@@ -1,0 +1,9 @@
+﻿.label {
+  display: inline-block;
+  padding-left: 1px;
+  margin-bottom: .2rem;
+}
+.label__required {
+  color: var(--color-danger);
+  font-weight: 600;
+}

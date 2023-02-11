@@ -9,14 +9,14 @@
 export class DNotification {
   @State() isMounted: boolean = false
 
-  // variant prop
-  @Prop() variant: string = 'info'
-  @Watch('variant')
-  validateVariant(variant: string) {
-    const isValid = ['info', 'success', 'warning', 'error'].includes(variant)
+  // type prop
+  @Prop() type: string = 'info'
+  @Watch('type')
+  validateType(type: string) {
+    const isValid = ['info', 'success', 'warning', 'error'].includes(type)
 
     if (!isValid) {
-      throw new Error(`${this.variant} is not a valid variant`)
+      throw new Error(`${this.type} is not a valid type`)
     }
   }
 
@@ -49,7 +49,7 @@ export class DNotification {
     return (
       <div class={`
         notification
-        notification--${this.variant}
+        notification--${this.type}
         ${this.isActive ? 'notification--active' : ''}
       `}>
         <slot></slot>

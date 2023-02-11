@@ -5,7 +5,7 @@
   right: 2rem;
   padding: var(--gap);
   color: #FFF;
-  border-radius: 2px;
+  border-radius: var(--border-radius);
   opacity: 0;
   transition: opacity .6s;
 }
@@ -16,11 +16,11 @@
   background-color: #333;
 }
 .notification--success {
-  background-color: green;
+  background-color: var(--color-success);
 }
 .notification--warning {
-  background-color: yellow;
+  background-color: var(--color-warning);
 }
 .notification--danger {
-  background-color: red;
+  background-color: var(--color-danger);
 }

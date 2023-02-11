@@ -12,24 +12,54 @@
   <body>
     <d-header name="App fixe"></d-header>
     <main d-container d-stack>
-      <d-button variant="primary" id="exampleDButton">Button</d-button>
+      <form d-stack>
+        <d-input
+          id="exampleDInputText"
+          type="text"
+          label="Name"
+          value="Benjamin"
+        ></d-input>
+        <d-input
+          id="exampleDInputTextRequired"
+          type="text"
+          label="Name"
+          required="true"
+          error="Fill in the name"
+        ></d-input>
+        <d-input
+          id="exampleDInputDate"
+          type="date"
+          label="Date"
+        ></d-input>
+        <d-button variant="primary" id="exampleDButton">Button</d-button>
+      </form>
     </main>
 
     <script>
 
       const App = (() => {
 
-        // init
-        onClickDButton()
+        // init events
+        document.getElementById('exampleDButton').addEventListener('dClick', event => {
+          showNotification('Button clicked!', 'success')
+        })
+        document.getElementById('exampleDInputText').addEventListener('dInput', event => {
+          if (event.detail.value) {
+            showNotification(event.detail.value)
+          }
+        })
+        document.getElementById('exampleDInputDate').addEventListener('dChange', event => {
+          if (event.detail.value) {
+            showNotification(`The date is ${event.detail.value}`)
+          }
+        })
 
         // methods
-        function onClickDButton() {
-          document.getElementById('exampleDButton').addEventListener('dClick', event => {
-            const notification = document.createElement('d-notification')
-            notification.innerHTML = 'Button clicked!'
-            notification.variant = 'success'
-            document.body.appendChild(notification)
-          })
+        function showNotification(content, type) {
+          const notification = document.createElement('d-notification')
+          notification.innerHTML = content
+          notification.type = type
+          document.body.appendChild(notification)
         }
       })()
     </script>

@@ -1,0 +1,25 @@
+﻿:host {
+  --height: 3.2rem;
+
+  display: block;
+}
+
+.input {
+  width: 100%;
+  height: var(--form-element-height, var(--height));
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 var(--gap-sm);
+  font-size: var(--font-size);
+  border-radius: var(--border-radius);
+  border: 2px solid #888;
+}
+.input--date {
+  padding-right: var(--gap-sm);
+}
+
+.input__error {
+  margin-top: var(--gap-xs);
+  color: var(--color-danger);
+}
+

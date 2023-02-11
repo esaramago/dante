@@ -1,9 +1,21 @@
 :root {
-    --color-main-500: tomato;
-    --color-secondary-500: yellow;;
+  --hue: 100;
+  --saturation: 50%;
+  --luminosity: 50%;
 
-    --gap-sm: .8rem;
-    --gap: calc(var(--gap-sm) * 2);
+  --color-main-500: hsl(var(--hue), var(--saturation), var(--luminosity));
 
-    --font-size: 1.5rem;
+  --color-danger: hsl(0, 100%, 50%);
+  --color-success: hsl(100, 100%, 40%);
+  --color-warning: hsl(55, 100%, 40%);
+
+  --gap: 1.6rem;
+  --gap-sm: calc(var(--gap) / 2);
+  --gap-xs: calc(var(--gap) / 4);
+
+  --font-size: 1.5rem;
+
+  --form-element-height: 3.6rem;
+
+  --border-radius: 2px;
 }
