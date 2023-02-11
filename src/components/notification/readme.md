@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     | Default  |
-| --------- | --------- | ----------- | -------- | -------- |
-| `variant` | `variant` |             | `string` | `'info'` |
+| Property | Attribute | Description | Type     | Default  |
+| -------- | --------- | ----------- | -------- | -------- |
+| `type`   | `type`    |             | `string` | `'info'` |
 
 
 ----------------------------------------------
