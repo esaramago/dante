@@ -12,20 +12,13 @@ export namespace Components {
     interface DHeader {
         "name": string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface DNotification {
+        "variant": string;
     }
+}
+export interface DButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLDButtonElement;
 }
 declare global {
     interface HTMLDButtonElement extends Components.DButton, HTMLStencilElement {
@@ -40,43 +33,33 @@ declare global {
         prototype: HTMLDHeaderElement;
         new (): HTMLDHeaderElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDNotificationElement extends Components.DNotification, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDNotificationElement: {
+        prototype: HTMLDNotificationElement;
+        new (): HTMLDNotificationElement;
     };
     interface HTMLElementTagNameMap {
         "d-button": HTMLDButtonElement;
         "d-header": HTMLDHeaderElement;
-        "my-component": HTMLMyComponentElement;
+        "d-notification": HTMLDNotificationElement;
     }
 }
 declare namespace LocalJSX {
     interface DButton {
+        "onDClick"?: (event: DButtonCustomEvent<any>) => void;
         "variant"?: string;
     }
     interface DHeader {
         "name"?: string;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface DNotification {
+        "variant"?: string;
     }
     interface IntrinsicElements {
         "d-button": DButton;
         "d-header": DHeader;
-        "my-component": MyComponent;
+        "d-notification": DNotification;
     }
 }
 export { LocalJSX as JSX };
@@ -85,7 +68,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
             "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "d-notification": LocalJSX.DNotification & JSXBase.HTMLAttributes<HTMLDNotificationElement>;
         }
     }
 }

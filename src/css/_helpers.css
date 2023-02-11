@@ -1,0 +1,9 @@
+[d-stack] > * + * {
+  margin-block-start: var(--gap);
+}
+
+[d-container] {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: var(--gap);
+}

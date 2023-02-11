@@ -1,4 +1,4 @@
-import { Component, Prop, h, Host } from '@stencil/core'
+import { Component, Prop, h, Host, Event, EventEmitter } from '@stencil/core'
 
 @Component({
     tag: 'd-button',
@@ -7,19 +7,26 @@ import { Component, Prop, h, Host } from '@stencil/core'
 })
 
 export class DButton {
-    @Prop() variant: string
+  @Prop() variant: string
 
-    render() {
-        return (
-            <Host>
-                <button
-                    type="button"
-                    class={'button button--' + this.variant}
-                    >
-                    <slot></slot>
-                </button>
-            </Host>
-        )
-    }
-    
+  @Event() dClick: EventEmitter
+
+  onClickButton(event) {
+    this.dClick.emit(event)
+  }
+
+  render() {
+    return (
+      <Host>
+        <button
+          type="button"
+          class={'button button--' + this.variant}
+          onClick={(e) => this.onClickButton(e)}
+        >
+          <slot></slot>
+        </button>
+      </Host>
+    )
+  }
+
 }

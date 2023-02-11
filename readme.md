@@ -26,7 +26,7 @@ import '/node_modules/dantesco/dist/dantesco/dantesco.esm.js'
 ## Layout example
 ```html
 <d-header name="..."></d-header>
-<main class="d-container d-stack">
+<main d-container d-stack>
   ...
 </main>
 ```

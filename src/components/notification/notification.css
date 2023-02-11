@@ -1,0 +1,26 @@
+﻿.notification {
+  position: fixed;
+  display: inline-block;
+  bottom: 2rem;
+  right: 2rem;
+  padding: var(--gap);
+  color: #FFF;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity .6s;
+}
+.notification--active {
+  opacity: 1;
+}
+.notification--info {
+  background-color: #333;
+}
+.notification--success {
+  background-color: green;
+}
+.notification--warning {
+  background-color: yellow;
+}
+.notification--danger {
+  background-color: red;
+}

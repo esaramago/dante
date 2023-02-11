@@ -11,9 +11,27 @@
   </head>
   <body>
     <d-header name="App fixe"></d-header>
-    <main class="d-container d-stack">
-      <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-      <d-button variant="primary">Botão</d-button>
+    <main d-container d-stack>
+      <d-button variant="primary" id="exampleDButton">Button</d-button>
     </main>
+
+    <script>
+
+      const App = (() => {
+
+        // init
+        onClickDButton()
+
+        // methods
+        function onClickDButton() {
+          document.getElementById('exampleDButton').addEventListener('dClick', event => {
+            const notification = document.createElement('d-notification')
+            notification.innerHTML = 'Button clicked!'
+            notification.variant = 'success'
+            document.body.appendChild(notification)
+          })
+        }
+      })()
+    </script>
   </body>
 </html>
