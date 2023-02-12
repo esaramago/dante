@@ -1,6 +1,7 @@
 # Dantesco
 A Web Component's library for esaramago.
 
+# How to use in your project
 ## Include in your project
 
 ### Include via cdn
@@ -23,7 +24,7 @@ import '/node_modules/dantesco/dist/dantesco/dantesco.css'
 import '/node_modules/dantesco/dist/dantesco/dantesco.esm.js'
 ```
 
-# Theme
+## Theme
 Add the following css custom properties are are from the default theme. Add them to your project, if you want to change them
 ```css
 :host {
@@ -44,6 +45,12 @@ Add the following css custom properties are are from the default theme. Add them
 </main>
 ```
 
+## Run storybook
+```
+npm run storybook
+```
+
+# How to continue developing Dantesco
 ## How to publish this library
 1. Run `npm run build`
 2. Update library version in package.json
