@@ -1,8 +1,8 @@
-[d-stack] > * + * {
+[dnt-stack] > * + * {
   margin-block-start: var(--gap);
 }
 
-[d-container] {
+[dnt-container] {
   max-width: 120rem;
   margin: 0 auto;
   padding: var(--gap);

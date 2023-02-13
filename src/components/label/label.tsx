@@ -1,7 +1,7 @@
 ﻿import { Component, Prop, h } from '@stencil/core'
 
 @Component({
-  tag: 'd-label',
+  tag: 'dnt-label',
   styleUrl: './label.css'
 })
 

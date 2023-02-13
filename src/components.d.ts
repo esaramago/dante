@@ -6,13 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface DButton {
+    interface DntButton {
         "variant": string;
     }
-    interface DHeader {
+    interface DntHeader {
         "name": string;
     }
-    interface DInput {
+    interface DntInput {
         "error": string;
         "id": string;
         "label": string;
@@ -21,104 +21,104 @@ export namespace Components {
         "type": string;
         "value": string;
     }
-    interface DLabel {
+    interface DntLabel {
         "htmlId": string;
         "required": boolean;
     }
-    interface DNotification {
+    interface DntNotification {
         "type": string;
     }
 }
-export interface DButtonCustomEvent<T> extends CustomEvent<T> {
+export interface DntButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLDButtonElement;
+    target: HTMLDntButtonElement;
 }
-export interface DInputCustomEvent<T> extends CustomEvent<T> {
+export interface DntInputCustomEvent<T> extends CustomEvent<T> {
     detail: T;
-    target: HTMLDInputElement;
+    target: HTMLDntInputElement;
 }
 declare global {
-    interface HTMLDButtonElement extends Components.DButton, HTMLStencilElement {
+    interface HTMLDntButtonElement extends Components.DntButton, HTMLStencilElement {
     }
-    var HTMLDButtonElement: {
-        prototype: HTMLDButtonElement;
-        new (): HTMLDButtonElement;
+    var HTMLDntButtonElement: {
+        prototype: HTMLDntButtonElement;
+        new (): HTMLDntButtonElement;
     };
-    interface HTMLDHeaderElement extends Components.DHeader, HTMLStencilElement {
+    interface HTMLDntHeaderElement extends Components.DntHeader, HTMLStencilElement {
     }
-    var HTMLDHeaderElement: {
-        prototype: HTMLDHeaderElement;
-        new (): HTMLDHeaderElement;
+    var HTMLDntHeaderElement: {
+        prototype: HTMLDntHeaderElement;
+        new (): HTMLDntHeaderElement;
     };
-    interface HTMLDInputElement extends Components.DInput, HTMLStencilElement {
+    interface HTMLDntInputElement extends Components.DntInput, HTMLStencilElement {
     }
-    var HTMLDInputElement: {
-        prototype: HTMLDInputElement;
-        new (): HTMLDInputElement;
+    var HTMLDntInputElement: {
+        prototype: HTMLDntInputElement;
+        new (): HTMLDntInputElement;
     };
-    interface HTMLDLabelElement extends Components.DLabel, HTMLStencilElement {
+    interface HTMLDntLabelElement extends Components.DntLabel, HTMLStencilElement {
     }
-    var HTMLDLabelElement: {
-        prototype: HTMLDLabelElement;
-        new (): HTMLDLabelElement;
+    var HTMLDntLabelElement: {
+        prototype: HTMLDntLabelElement;
+        new (): HTMLDntLabelElement;
     };
-    interface HTMLDNotificationElement extends Components.DNotification, HTMLStencilElement {
+    interface HTMLDntNotificationElement extends Components.DntNotification, HTMLStencilElement {
     }
-    var HTMLDNotificationElement: {
-        prototype: HTMLDNotificationElement;
-        new (): HTMLDNotificationElement;
+    var HTMLDntNotificationElement: {
+        prototype: HTMLDntNotificationElement;
+        new (): HTMLDntNotificationElement;
     };
     interface HTMLElementTagNameMap {
-        "d-button": HTMLDButtonElement;
-        "d-header": HTMLDHeaderElement;
-        "d-input": HTMLDInputElement;
-        "d-label": HTMLDLabelElement;
-        "d-notification": HTMLDNotificationElement;
+        "dnt-button": HTMLDntButtonElement;
+        "dnt-header": HTMLDntHeaderElement;
+        "dnt-input": HTMLDntInputElement;
+        "dnt-label": HTMLDntLabelElement;
+        "dnt-notification": HTMLDntNotificationElement;
     }
 }
 declare namespace LocalJSX {
-    interface DButton {
-        "onDClick"?: (event: DButtonCustomEvent<any>) => void;
+    interface DntButton {
+        "onDClick"?: (event: DntButtonCustomEvent<any>) => void;
         "variant"?: string;
     }
-    interface DHeader {
+    interface DntHeader {
         "name"?: string;
     }
-    interface DInput {
+    interface DntInput {
         "error"?: string;
         "id": string;
         "label": string;
-        "onDChange"?: (event: DInputCustomEvent<any>) => void;
-        "onDInput"?: (event: DInputCustomEvent<any>) => void;
+        "onDChange"?: (event: DntInputCustomEvent<any>) => void;
+        "onDInput"?: (event: DntInputCustomEvent<any>) => void;
         "placeholder"?: string;
         "required"?: boolean;
         "type"?: string;
         "value"?: string;
     }
-    interface DLabel {
+    interface DntLabel {
         "htmlId": string;
         "required"?: boolean;
     }
-    interface DNotification {
+    interface DntNotification {
         "type"?: string;
     }
     interface IntrinsicElements {
-        "d-button": DButton;
-        "d-header": DHeader;
-        "d-input": DInput;
-        "d-label": DLabel;
-        "d-notification": DNotification;
+        "dnt-button": DntButton;
+        "dnt-header": DntHeader;
+        "dnt-input": DntInput;
+        "dnt-label": DntLabel;
+        "dnt-notification": DntNotification;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "d-button": LocalJSX.DButton & JSXBase.HTMLAttributes<HTMLDButtonElement>;
-            "d-header": LocalJSX.DHeader & JSXBase.HTMLAttributes<HTMLDHeaderElement>;
-            "d-input": LocalJSX.DInput & JSXBase.HTMLAttributes<HTMLDInputElement>;
-            "d-label": LocalJSX.DLabel & JSXBase.HTMLAttributes<HTMLDLabelElement>;
-            "d-notification": LocalJSX.DNotification & JSXBase.HTMLAttributes<HTMLDNotificationElement>;
+            "dnt-button": LocalJSX.DntButton & JSXBase.HTMLAttributes<HTMLDntButtonElement>;
+            "dnt-header": LocalJSX.DntHeader & JSXBase.HTMLAttributes<HTMLDntHeaderElement>;
+            "dnt-input": LocalJSX.DntInput & JSXBase.HTMLAttributes<HTMLDntInputElement>;
+            "dnt-label": LocalJSX.DntLabel & JSXBase.HTMLAttributes<HTMLDntLabelElement>;
+            "dnt-notification": LocalJSX.DntNotification & JSXBase.HTMLAttributes<HTMLDntNotificationElement>;
         }
     }
 }

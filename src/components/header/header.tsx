@@ -1,7 +1,7 @@
 import { Component, Prop, h, Host } from '@stencil/core'
 
 @Component({
-  tag: 'd-header',
+  tag: 'dnt-header',
   styleUrl: './header.css',
   shadow: true
 })

@@ -1,7 +1,7 @@
 ﻿import { Component, Prop, h, Watch, Event, EventEmitter } from '@stencil/core'
 
 @Component({
-  tag: 'd-input',
+  tag: 'dnt-input',
   styleUrl: './input.css',
   shadow: true
 })

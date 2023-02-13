@@ -1,7 +1,7 @@
 ﻿import { Component, Prop, Watch, State, h } from '@stencil/core'
 
 @Component({
-  tag: 'd-notification',
+  tag: 'dnt-notification',
   styleUrl: './notification.css',
   shadow: true,
 })

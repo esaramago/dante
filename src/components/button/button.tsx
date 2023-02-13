@@ -1,9 +1,9 @@
 import { Component, Prop, h, Host, Event, EventEmitter } from '@stencil/core'
 
 @Component({
-    tag: 'd-button',
-    styleUrl: './button.css',
-    shadow: true,
+  tag: 'dnt-button',
+  styleUrl: './button.css',
+  shadow: true,
 })
 
 export class DButton {

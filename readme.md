@@ -4,28 +4,29 @@ A Web Component's library for esaramago.
 # How to use in your project
 ## Include in your project
 
-### Include via cdn
-```html
-<!-- index.html -->
-
-<link rel="stylesheet" href="https://unpkg.com/dantesco@0.1.13/dist/dantesco/dantesco.css">
-
-<script type="module" src="https://unpkg.com/dantesco@0.1.13/dist/dantesco/dantesco.esm.js"></script>
-```
-
-### Install and import via cdn
+### Install and import via npm
 ```
 npm install dantesco --save
 ```
 
 ```js
 // main.js
-import '/node_modules/dantesco/dist/dantesco/dantesco.css'
-import '/node_modules/dantesco/dist/dantesco/dantesco.esm.js'
+import '/node_modules/dantesco/dist/dantesco/core.css'
+import '/node_modules/dantesco/dist/dantesco/core.esm.js'
 ```
 
+### Include via cdn
+```html
+<!-- index.html -->
+
+<link rel="stylesheet" href="https://unpkg.com/dantesco@1.0.1/dist/dantesco/core.css">
+
+<script type="module" src="https://unpkg.com/dantesco@1.0.1/dist/dantesco/core.esm.js"></script>
+```
+
+
 ## Theme
-Add the following css custom properties are are from the default theme. Add them to your project, if you want to change them
+The following css custom properties are from the default theme. Add them to your project, if you want to change them
 ```css
 :host {
   --color-main-500: #333;
