@@ -14,7 +14,6 @@ export namespace Components {
     }
     interface DntInput {
         "error": string;
-        "id": string;
         "label": string;
         "placeholder": string;
         "required": boolean;
@@ -86,7 +85,6 @@ declare namespace LocalJSX {
     }
     interface DntInput {
         "error"?: string;
-        "id": string;
         "label": string;
         "onDChange"?: (event: DntInputCustomEvent<any>) => void;
         "onDInput"?: (event: DntInputCustomEvent<any>) => void;

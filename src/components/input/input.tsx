@@ -7,7 +7,6 @@
 })
 
 export class DInput {
-  @Prop() id! : string
   @Prop() label! : string
 
   @Prop() value : string = ''
@@ -40,15 +39,16 @@ export class DInput {
   }
 
   render() {
+    const uniqueId = `dnt-input-${Math.random().toString(36)}`
     return (
       <div>
         <dnt-label
-          htmlId={this.id}
+          htmlId={uniqueId}
           required={this.required}
         >{this.label}</dnt-label>
         <input
           class={`input input--${this.type}`}
-          id={this.id}
+          id={uniqueId}
           type={this.type}
           value={this.value}
           onKeyUp={(e) => this.onInput(e)}

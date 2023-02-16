@@ -10,7 +10,6 @@
 | Property             | Attribute     | Description | Type      | Default     |
 | -------------------- | ------------- | ----------- | --------- | ----------- |
 | `error`              | `error`       |             | `string`  | `''`        |
-| `id` _(required)_    | `id`          |             | `string`  | `undefined` |
 | `label` _(required)_ | `label`       |             | `string`  | `undefined` |
 | `placeholder`        | `placeholder` |             | `string`  | `''`        |
 | `required`           | `required`    |             | `boolean` | `false`     |
