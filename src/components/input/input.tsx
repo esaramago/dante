@@ -3,7 +3,7 @@
 @Component({
   tag: 'dnt-input',
   styleUrl: './input.css',
-  shadow: true
+  shadow: true,
 })
 
 export class DInput {
@@ -42,10 +42,10 @@ export class DInput {
   render() {
     return (
       <div>
-        <d-label
+        <dnt-label
           htmlId={this.id}
           required={this.required}
-        >{this.label}</d-label>
+        >{this.label}</dnt-label>
         <input
           class={`input input--${this.type}`}
           id={this.id}

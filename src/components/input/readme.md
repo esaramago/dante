@@ -30,13 +30,13 @@
 
 ### Depends on
 
-- [d-label](../label)
+- [dnt-label](../label)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-input --> d-label
-  style d-input fill:#f9f,stroke:#333,stroke-width:4px
+  dnt-input --> dnt-label
+  style dnt-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

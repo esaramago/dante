@@ -1,4 +1,4 @@
-﻿import { Component, Prop, h } from '@stencil/core'
+﻿import { Component, Prop, Host, h } from '@stencil/core'
 
 @Component({
   tag: 'dnt-label',
@@ -11,10 +11,12 @@ export class DLabel {
 
   render() {
     return (
-      <label htmlFor={this.htmlId} class="label">
-        <slot></slot>
-        {this.required && <span class="label__required"> *</span>}
-      </label>
+      <Host>
+        <label htmlFor={this.htmlId} class="label">
+          <slot></slot>
+          {this.required && <span class="label__required"> *</span>}
+        </label>
+      </Host>
     )
   }
 }

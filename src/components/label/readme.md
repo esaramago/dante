@@ -17,13 +17,13 @@
 
 ### Used by
 
- - [d-input](../input)
+ - [dnt-input](../input)
 
 ### Graph
 ```mermaid
 graph TD;
-  d-input --> d-label
-  style d-label fill:#f9f,stroke:#333,stroke-width:4px
+  dnt-input --> dnt-label
+  style dnt-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
