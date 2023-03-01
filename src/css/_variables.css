@@ -1,9 +1,5 @@
 :root {
-  --hue: 100;
-  --saturation: 50%;
-  --luminosity: 50%;
-
-  --color-main-500: hsl(var(--hue), var(--saturation), var(--luminosity));
+  --color-main-500: hsl(0, 0%, 10%);
 
   --color-danger: hsl(0, 100%, 50%);
   --color-success: hsl(100, 100%, 40%);

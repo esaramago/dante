@@ -12,7 +12,10 @@ export class DHeader {
   render() {
     return (
       <Host>
-        <span>{this.name}</span>
+        <div class="header__start">
+          <img src="img/logo.svg" alt={`Logo ${this.name}`} class="header__logo" />
+          <span class="header__title">{this.name}</span>
+        </div>
         <slot></slot>
       </Host>
     )

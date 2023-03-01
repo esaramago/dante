@@ -8,3 +8,7 @@ body {
 body {
   font-size: var(--font-size);
 }
+img {
+  display: block;
+  max-width: 100%;
+}
