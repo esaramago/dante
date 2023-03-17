@@ -33,18 +33,20 @@
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/html": "^6.1.21",
     "@storybook/manager-webpack4": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
+    "@storybook/web-components": "^6.5.16",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "babel-loader": "^8.3.0",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
+    "lit-html": "^2.6.1",
     "puppeteer": "^19.5.2"
   },
   "license": "MIT"

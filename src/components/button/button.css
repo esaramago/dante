@@ -6,7 +6,7 @@
 }
 
 .button {
-  border-radius: var(--border-radius);
+  border-radius: var(--form-element-border-radius);
   padding: 0 1.6rem;
   height: var(--form-element-height, var(--height));
   background-color: var(--color-main-500, var(--color-main));
